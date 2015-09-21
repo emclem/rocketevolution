@@ -1,0 +1,246 @@
+@import 'class.scss';
+
+
+// KEYFRAMES [TWINKLE]
+@keyframes move-twink-back {
+	from { background-position: 0 0; }
+	to { background-position:-10000px 5000px; }
+}
+@-webkit-keyframes move-twink-back {
+	from { background-position: 0 0; }
+	to { background-position:-10000px 5000px; }
+}
+@-moz-keyframes move-twink-back {
+	from { background-position: 0 0; }
+	to { background-position:-10000px 5000px; }
+}
+@-ms-keyframes move-twink-back {
+	from { background-position: 0 0; }
+	to { background-position:-10000px 5000px; }
+}
+// KEYFRAMES [CLOUDS]
+@keyframes move-clouds-back {
+	from { background-position: 0 0; }
+	to { background-position:10000px 0; }
+}
+@-webkit-keyframes move-clouds-back {
+	from { background-position: 0 0; }
+	to { background-position:10000px 0; }
+}
+@-moz-keyframes move-clouds-back {
+	from { background-position: 0 0; }
+	to { background-position:10000px 0; }
+}
+@-ms-keyframes move-clouds-back {
+	from { background-position: 0 0; }
+	to { background-position:10000px 0; }
+}
+
+
+// VARIABLES
+$width: 23%;
+$spacer: 24px;
+
+
+// PLACEHOLDER
+%nospace {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+// MIXINS
+@mixin round($radius: 50%) {
+	border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+}
+@mixin transition($time: 1s) {
+	transition: all $time ease-in-out;
+	-o-transition: all $time ease-in-out;
+	-ms-transition: all $time ease-in-out;
+	-moz-transition: all $time ease-in-out;
+	-webkit-transition: all $time ease-in-out;
+}
+
+
+
+
+
+// LEFTPANEL
+.leftpanel {
+	@extend %nospace;
+	@include transition(500ms);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: $width;
+	height: 100%;
+	overflow: hidden;
+	background: #111;
+	opacity: 1;
+	z-index: 99999;
+}
+
+
+
+// CONTENT
+.content {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	padding: $spacer;
+	width: 100%;
+	// LOGO
+	.logo {
+		padding: 4px;
+		background: rgba(#FFF, 0.15);
+		@include transition(500ms);
+		&:hover { background: rgba(#FFF, 0.75); }
+	}
+	// NAVIGATION
+	.navigation {
+		@extend %nospace;
+		padding: 15px 0px 0px 0px;
+		li {
+			@include round(5px);
+			width: 100%;
+			display: block;
+			padding: 1px 5px;
+			font-size: 1.1em;
+			a {
+				@include transition(400ms);
+				width: 100%;
+				display: block;
+				width: 100%;
+				padding: 10px 20px;
+				background: rgba(#cf0000, 0.5);
+				color: #FFF;
+				@include round(5px);
+				text-decoration: none;
+				&:hover {
+					padding: 15px 20px;
+					background: rgba($orange, 1);
+					text-decoration: none;
+				}
+				&.active {
+					padding: 15px 20px;
+					background: rgba(#cf0000, 1);
+				}
+			}
+		}
+	}
+}
+
+
+
+// RESPONSIVE BUTTON
+.responsive-btn-container {
+	position: absolute;
+	top: 10px;
+	left: 0px;
+	z-index: 6;
+	width: 100%;
+	display: block;
+	text-align: left;
+	.responsive-social {
+		float: right;
+		list-style: none;
+		padding: 13px 10px 0px 0px;
+		li {
+			padding: 0px 1px;
+			display: inline-block;
+			font-size: 1.1em;
+			a {
+				@include transition(300ms);
+				color: rgba($lightred, 0.8);
+				&:hover { color: rgba($orange, 1); }
+			}
+		}
+	}
+	button {
+		@include transition(300ms);
+		line-height: 42px;
+		border: none;
+		background: rgba($lightred, 0.8);
+		color: #FFF;
+		padding: 8px 20px;
+		margin-left: 10px;
+		&:hover { background: rgba($orange, 1); }
+	}
+}
+
+
+
+// RESPONSIVE MENU
+.responsive-menu {
+	@include transition(700ms);
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	z-index: 7;
+	width: 100%;
+	opacity: 0;
+	ul {
+		padding: 30px 40px;
+		margin: 0px;
+		list-style: none;
+		li {
+			a {
+				@include transition(200ms);
+				@include round(5px);
+				display: block;
+				width: 100%;
+				padding: 15px 15px;
+				margin-bottom: 1px;
+				background: rgba($lightred, 0.8);
+				color: #FFF;
+				&:hover { background: rgba($orange, 1); }
+				&.active { background: rgba($orange, 1); }
+			}
+		}
+	}
+}
+.responsive-menu-show {
+	@include transition(500ms);
+	top: 80px;
+	opacity: 1;
+}
+
+
+
+// BACKGROUND
+.stars, .twinkling, .clouds {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	display: block;
+}
+.stars {
+	background: #000 url("../images/stars.png") repeat top center;
+	z-index: 0;
+}
+.twinkling{
+	background:transparent url("../images/twinkling.png") repeat top center;
+	z-index: 1;
+	-moz-animation: move-twink-back 80s linear infinite;
+	-ms-animation: move-twink-back 80s linear infinite;
+	-o-animation: move-twink-back 80s linear infinite;
+	-webkit-animation: move-twink-back 80s linear infinite;
+	animation: move-twink-back 80s linear infinite;
+}
+.clouds{
+	background: transparent url("../images/clouds3.png") repeat top center;
+	z-index: 3;
+	-moz-animation: move-clouds-back 150s linear infinite;
+	-ms-animation: move-clouds-back 150s linear infinite;
+	-o-animation: move-clouds-back 150s linear infinite;
+	-webkit-animation: move-clouds-back 150s linear infinite;
+	animation: move-clouds-back 150s linear infinite;
+}

@@ -1,0 +1,50 @@
+// VARIABLES
+$red: #CF0000;
+$darkred: #900;
+$lightred: #ff2323;
+$lighterred: #ff5f5f;
+$gray: #999;
+$darkgray: #555;
+$darkergray: #333;
+$lightgray: #AAA;
+$lightergray: #c5c5c5;
+$orange: #ff7200;
+$purple: #bb0061;
+$responsivetopmenu_height: 80px;
+
+
+
+// PLACEHOLDER
+%nospace {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+// MIXIN
+@mixin clearspace() {
+	padding: 0px;
+	margin: 0px auto;
+}
+@mixin round($radius: 50%) {
+	border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;	
+}
+@mixin transition($duration: 1s) {
+	transition: all $duration ease-IN;
+	-o-transition: all $duration ease;
+	-ms-transition: all $duration ease;
+	-moz-transition: all $duration ease;
+	-webkit-transition: all $duration ease;
+}
+@mixin shadow($thickness: 25px) {
+	box-shadow: 0 0 $thickness 1px rgba(#000, 0.3);
+	-o-box-shadow: 0 0 $thickness 1px rgba(#000, 0.3);
+	-ms-box-shadow: 0 0 $thickness 1px rgba(#000, 0.3);
+	-moz-box-shadow: 0 0 $thickness 1px rgba(#000, 0.3);
+	-webkit-box-shadow: 0 0 $thickness 1px rgba(#000, 0.3);
+}
