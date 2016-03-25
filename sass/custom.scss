@@ -8,12 +8,13 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	background: #FFF;
 	font-size: 15px;
+	line-height: 1.5em;
 	width: 100%;
 	color: $lightgray;
 	overflow-x: hidden;
 }
 ul,li { @extend %clearspace-extend; list-style: none; }
-h1,h2,h3,h4,h5,h6 { @extend %clearspace-extend; line-height: 1.3em; }
+h1,h2,h3,h4,h5,h6 { @extend %clearspace-extend; line-height: 1.4em; }
 h1 { font-size: 3em; }
 h2 { font-size: 2.5em; }
 h3 { font-size: 2em; }
@@ -104,6 +105,7 @@ $header-height: 60px;
 		max-height: $header-height - 20;
 	}
 	.nav {
+		font-size: 0.8em;
 		li {
 			display: inline-block;
 			a {
@@ -112,7 +114,10 @@ $header-height: 60px;
 				display: block;
 				padding: 0px 8px;
 				color: $gray;
-				&:hover { color: $red; }
+				&:hover {
+					color: #FFF;
+					background: $lightgray;
+				}
 			}
 			&.active {
 				background: $red;
@@ -121,7 +126,7 @@ $header-height: 60px;
 		}
 	}
 	.follow {
-		font-size: 1.1em;
+		font-size: 1.2em;
 		height: $header-height;
 		line-height: $header-height;
 		li {
@@ -131,7 +136,10 @@ $header-height: 60px;
 				padding: 0px 8px;
 				color: $lightergray;
 				border-right: 1px solid #dedede;
-				&:hover { color: $red; }
+				&:hover .fa-facebook { color: #0078ff; }
+				&:hover .fa-instagram { color: #a08252; }
+				&:hover .fa-youtube { color: #ff0000; }
+				&:hover .fa-github { color: #eb8963; }
 			}
 		}
 	}
@@ -147,12 +155,15 @@ $header-height: 60px;
 		max-height: $header-height - 10;
 	}
 	.nav {
+		font-size: 1em;
 		li {
 			a {
 				height: $header-height + 10px;
 				line-height: $header-height + 10px;
 				color: #FFF;
-				&:hover { color: $red; }
+				&:hover {
+					background: $darkestgray;
+				}
 			}
 		}
 	}
@@ -175,8 +186,31 @@ $header-height: 60px;
 
 
 // SLIDESHOW
-.slideshow {
+#slider {
 	padding-top: $header-height + 70px;
+	.carousel-indicators {
+		bottom: 0;
+		li {
+			background: #C4C4BE;
+			&.active { background: #F90; }
+		}
+	}
+	.imageslide {
+		margin-left: 0;
+	}
+	.item {
+		padding: 0px 30px;
+	}
+	.control-carousel {
+	  position: absolute;
+	  top: 48%;
+	  font-size: 60px;
+	  color: #C2C2C1;
+	  &:hover { color: $red; }
+	}
+	.right {
+		right: 0;
+	}
 }
 
 
