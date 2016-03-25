@@ -1,0 +1,47 @@
+// COLORS
+$lightestgray: #EEE;
+$lightergray: #BBB;
+$lightgray: #888;
+$gray: #555;
+$darkgray: #333;
+$darkergray: #222;
+$darkestgray: #111;
+$red: #F00;
+
+
+
+
+// EXTEND
+%clearspace-extend {
+	padding: 0px;
+	margin: 0px auto;
+}
+
+
+
+// MIXIN
+@mixin clearspace {
+	padding: 0px;
+	margin: 0px auto;
+} 
+@mixin roundcorners($radius: 50%) {
+	border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;	
+}
+@mixin transition($duration: 500ms) {
+	transition: all $duration ease-IN;
+	-o-transition: all $duration ease;
+	-ms-transition: all $duration ease;
+	-moz-transition: all $duration ease;
+	-webkit-transition: all $duration ease;
+}
+@mixin shadow($thickness: 25px) {
+	box-shadow: 0 0 $thickness 1px rgba(#000, 0.1);
+	-o-box-shadow: 0 0 $thickness 1px rgba(#000, 0.1);
+	-ms-box-shadow: 0 0 $thickness 1px rgba(#000, 0.1);
+	-moz-box-shadow: 0 0 $thickness 1px rgba(#000, 0.1);
+	-webkit-box-shadow: 0 0 $thickness 1px rgba(#000, 0.1);
+}

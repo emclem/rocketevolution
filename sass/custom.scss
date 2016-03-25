@@ -1,0 +1,280 @@
+@import "include";
+
+
+// DEFAULT
+body {
+	@extend %clearspace-extend;
+	@include transition();
+	font-family: 'Source Sans Pro', sans-serif;
+	background: #FFF;
+	font-size: 15px;
+	width: 100%;
+	color: $lightgray;
+	overflow-x: hidden;
+}
+ul,li { @extend %clearspace-extend; list-style: none; }
+h1,h2,h3,h4,h5,h6 { @extend %clearspace-extend; line-height: 1.3em; }
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+h4 { font-size: 1.75em; }
+h5 { font-size: 1.5em; }
+h6 { font-size: 1.25em; }
+a {
+	@include transition(200ms);
+	color: $red;
+	&:hover { color: $gray; text-decoration: none; }
+}
+
+
+// CUSTOM
+.clearspace { @include clearspace(); }
+.pad-t-xs { padding-top: 5px; }
+.pad-t-sm { padding-top: 10px; }
+.pad-t-md { padding-top: 20px; }
+.pad-t-lg { padding-top: 30px; }
+.pad-t-xl { padding-top: 50px; }
+.pad-r-xs { padding-right: 5px; }
+.pad-r-sm { padding-right: 10px; }
+.pad-r-md { padding-right: 20px; }
+.pad-r-lg { padding-right: 30px; }
+.pad-r-xl { padding-right: 50px; }
+.pad-b-xs { padding-bottom: 5px; }
+.pad-b-sm { padding-bottom: 10px; }
+.pad-b-md { padding-bottom: 20px; }
+.pad-b-lg { padding-bottom: 30px; }
+.pad-b-xl { padding-bottom: 50px; }
+.pad-l-xs { padding-left: 5px; }
+.pad-l-sm { padding-left: 10px; }
+.pad-l-md { padding-left: 20px; }
+.pad-l-lg { padding-left: 30px; }
+.pad-l-xl { padding-left: 50px; }
+.round-circle { @include roundcorners(); }
+.round-xs { @include roundcorners(5px); }
+.round-sm { @include roundcorners(10px); }
+.round-md { @include roundcorners(15px); }
+.round-lg { @include roundcorners(20px); }
+.round-xl { @include roundcorners(30px); }
+.shadow-xs { @include shadow(5px); }
+.shadow-sm { @include shadow(10px); }
+.shadow-md { @include shadow(15px); }
+.shadow-lg { @include shadow(25px); }
+.shadow-xl { @include shadow(35px); }
+.textcolor-lightestgray { color: $lightestgray; }
+.textcolor-lightergray { color: $lightergray; }
+.textcolor-lightgray { color: $lightgray; }
+.textcolor-gray { color: $gray; }
+.textcolor-darkgray { color: $darkgray; }
+.textcolor-darkergray { color: $darkergray; }
+.textcolor-darkestgray { color: $darkestgray; }
+.textcolor-red { color: $red; }
+.hr-border {
+	padding: 0px;
+	margin: 100px auto;
+	border-color: $lightergray + 40;
+}
+
+
+
+
+
+
+// HEADER
+$max-width: 1170px;
+$header-height: 60px;
+.header {
+	@extend %clearspace-extend;
+	@include transition(200ms);
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	height: $header-height;
+	overflow: hidden;
+	background: rgba(#FFF, 0.93);
+	.logo {
+		@include transition(400ms);
+		position: absolute;
+		top: 10px;
+		max-height: $header-height - 20;
+	}
+	.logo-light {
+		@include transition(400ms);
+		position: absolute;
+		top: -90px;
+		max-height: $header-height - 20;
+	}
+	.nav {
+		li {
+			display: inline-block;
+			a {
+				height: $header-height;
+				line-height: $header-height;
+				display: block;
+				padding: 0px 8px;
+				color: $gray;
+				&:hover { color: $red; }
+			}
+			&.active {
+				background: $red;
+				a { color: #FFF; &:hover { color: #FFF; } }
+			}
+		}
+	}
+	.follow {
+		font-size: 1.1em;
+		height: $header-height;
+		line-height: $header-height;
+		li {
+			display: inline;
+			&:first-child { border-left: 1px solid #dedede; }
+			a {
+				padding: 0px 8px;
+				color: $lightergray;
+				border-right: 1px solid #dedede;
+				&:hover { color: $red; }
+			}
+		}
+	}
+}
+.header-scrolled {
+	height: $header-height + 10px;
+	background: rgba($darkgray, 0.85);
+	.logo {
+		top: -90px;
+	}
+	.logo-light {
+		top: 10px;
+		max-height: $header-height - 10;
+	}
+	.nav {
+		li {
+			a {
+				height: $header-height + 10px;
+				line-height: $header-height + 10px;
+				color: #FFF;
+				&:hover { color: $red; }
+			}
+		}
+	}
+	.follow {
+		height: $header-height + 10px;
+		line-height: $header-height + 10px;
+		li {
+			display: inline;
+			&:first-child { border-left: 1px solid rgba(#FFF, 0.5); }
+			a {
+				padding: 0px 8px;
+				color: #FFF;
+				border-right: 1px solid rgba(#FFF, 0.5);
+				&:hover { color: $red; }
+			}
+		}
+	}
+}
+
+
+
+// SLIDESHOW
+.slideshow {
+	padding-top: $header-height + 70px;
+}
+
+
+
+// MENU
+$menu-fa-dimension: 100px;
+$menu-transition-speed: 400ms;
+.menu {
+	.menu-item {
+		@include transition($menu-transition-speed);
+		cursor: pointer;
+		color: $lightgray;
+		text-align: center;
+		a { color: $lightgray; }
+		.btn-default { @include transition($menu-transition-speed); }
+		.fa {
+			@include transition($menu-transition-speed);
+			width: $menu-fa-dimension;
+			height: $menu-fa-dimension;
+			line-height: $menu-fa-dimension;
+			font-size: 2em;
+			border: solid 1px $lightergray;
+		}
+		h1,h2,h3,h4,h5,h6 { padding: 20px 0px; }
+		p { padding-bottom: 30px; }
+		&:hover {
+			color: $darkestgray;
+			.fa {
+				background: $red;
+				color: #FFF;
+				border-color: #FFF;
+				box-shadow: 0 0 0px 2px $red;
+				-o-box-shadow: 0 0 0px 2px $red;
+				-ms-box-shadow: 0 0 0px 2px $red;
+				-moz-box-shadow: 0 0 0px 2px $red;
+				-webkit-box-shadow: 0 0 0px 2px $red;
+			}
+			a { color: $darkestgray; }
+			.btn-default {
+				background: $red;
+				color: #FFF;
+				border: solid 1px $red - 20;
+			}
+		}
+	}
+}
+
+
+
+
+// CONTENT
+$content-spacer: 100px;
+.content-dark {
+	padding: $content-spacer - 25px 0px;
+	background: #F5F5F5;
+}
+.content-light {
+	padding: $content-spacer - 25px 0px;
+	background: #FFF;
+}
+
+
+
+
+
+
+// MEDIA QUERY
+@media (min-width: 1200px) { // LG
+	.clearpadding-lg { padding: 0px !important; }
+}
+@media (min-width: 992px) and (max-width: 1199px) { // MD
+	.clearpadding-md { padding: 0px !important; }
+}
+@media (min-width: 768px) and (max-width: 991px) { // SM
+	.clearpadding-sm { padding: 0px !important; }
+}
+@media (max-width: 767px) { // XS
+	.clearpadding-xs { padding: 0px !important; }
+}
+
+
+
+
+
+// BOOTSTRAP OVERRIDE
+.btn-warning {
+	background: #F90;
+	color: #FFF;
+	&:hover {
+		background: #F90 + 50;
+		border: solid 1px #F90 + 30;
+	}
+}
+.btn-danger {
+	background: $red - 50;
+	color: #FFF;
+	&:hover {
+		background: $red;
+		border: solid 1px $red - 20;
+	}
+}
