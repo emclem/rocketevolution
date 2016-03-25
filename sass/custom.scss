@@ -1,11 +1,14 @@
 @import "include";
-
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700);
 
 // DEFAULT
 body {
 	@extend %clearspace-extend;
 	@include transition();
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
 	background: #FFF;
 	font-size: 15px;
 	line-height: 1.5em;
@@ -30,26 +33,26 @@ a {
 
 // CUSTOM
 .clearspace { @include clearspace(); }
-.pad-t-xs { padding-top: 5px; }
-.pad-t-sm { padding-top: 10px; }
-.pad-t-md { padding-top: 20px; }
-.pad-t-lg { padding-top: 30px; }
-.pad-t-xl { padding-top: 50px; }
-.pad-r-xs { padding-right: 5px; }
-.pad-r-sm { padding-right: 10px; }
-.pad-r-md { padding-right: 20px; }
-.pad-r-lg { padding-right: 30px; }
-.pad-r-xl { padding-right: 50px; }
-.pad-b-xs { padding-bottom: 5px; }
-.pad-b-sm { padding-bottom: 10px; }
-.pad-b-md { padding-bottom: 20px; }
-.pad-b-lg { padding-bottom: 30px; }
-.pad-b-xl { padding-bottom: 50px; }
-.pad-l-xs { padding-left: 5px; }
-.pad-l-sm { padding-left: 10px; }
-.pad-l-md { padding-left: 20px; }
-.pad-l-lg { padding-left: 30px; }
-.pad-l-xl { padding-left: 50px; }
+.pad-t-xs { padding-top: 5px !important; }
+.pad-t-sm { padding-top: 10px !important; }
+.pad-t-md { padding-top: 20px !important; }
+.pad-t-lg { padding-top: 30px !important; }
+.pad-t-xl { padding-top: 50px !important; }
+.pad-r-xs { padding-right: 5px !important; }
+.pad-r-sm { padding-right: 10px !important; }
+.pad-r-md { padding-right: 20px !important; }
+.pad-r-lg { padding-right: 30px !important; }
+.pad-r-xl { padding-right: 50px !important; }
+.pad-b-xs { padding-bottom: 5px !important; }
+.pad-b-sm { padding-bottom: 10px !important; }
+.pad-b-md { padding-bottom: 20px !important; }
+.pad-b-lg { padding-bottom: 30px !important; }
+.pad-b-xl { padding-bottom: 50px !important; }
+.pad-l-xs { padding-left: 5px !important; }
+.pad-l-sm { padding-left: 10px !important; }
+.pad-l-md { padding-left: 20px !important; }
+.pad-l-lg { padding-left: 30px !important; }
+.pad-l-xl { padding-left: 50px !important; }
 .round-circle { @include roundcorners(); }
 .round-xs { @include roundcorners(5px); }
 .round-sm { @include roundcorners(10px); }
@@ -187,7 +190,7 @@ $header-height: 60px;
 
 // SLIDESHOW
 #slider {
-	padding-top: $header-height + 70px;
+	padding-top: $header-height + 90px;
 	.carousel-indicators {
 		bottom: 0;
 		li {
@@ -264,12 +267,24 @@ $menu-transition-speed: 400ms;
 // CONTENT
 $content-spacer: 100px;
 .content-dark {
+	color: $darkgray;
 	padding: $content-spacer - 25px 0px;
 	background: #F5F5F5;
 }
 .content-light {
 	padding: $content-spacer - 25px 0px;
 	background: #FFF;
+}
+.featured-portfolio {
+	
+}
+
+
+
+// FOOTER
+$footer-height: 500px;
+.footer {
+
 }
 
 
