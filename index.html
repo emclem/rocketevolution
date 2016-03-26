@@ -9,37 +9,61 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
 	<link rel="stylesheet" type="text/css" href="css/animate.css" />
-    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/custom.css" />
 	<script type="text/javascript" src="js/respond.js"></script>
 	<script type="text/javascript" src="js/wow.min.js"></script>
-    <script>
-    	new WOW().init();
-    </script>
+	<script>
+		new WOW().init();
+	</script>
 
 </head>
 <body>
 
 
+	<!-- begin [REPONSIVE-MENU] -->
+	<div id="responsivemenu" class="responsivemenu shadow visible-sm visible-xs">
+		<button type="button" id="responsivemenubutton" class="backbutton btn btn-warning">
+			<span><small>CLOSE</small></span>
+			<span class="fa fa-times"></span>
+		</button>
+		<ul>
+			<li><a href="http://rocketevolution.com" class="active shadow">Home</a>
+			</li><li><a href="#">Services</a>
+			</li><li><a href="#">Portfolio</a>
+			</li><li><a href="#">Hire Us</a>
+			</li><li><a href="#">Contact Us</a>
+		</ul>
+	</div>
+	<!-- end [REPONSIVE-MENU] -->
+
+
 	<!-- begin [HEADER] -->
-	<div class="header shadow-xs">
+	<div class="header shadow-xs wow fadeInDown" data-wow-delay="200ms">
 		<div class="container">
 		<div class="row">
 			<!-- begin [LOGO] -->
-			<div class="col-lg-3 col-md-3 text-left">
+			<div class="col-lg-3 col-md-3 col-sm-7 col-xs-7 text-left">
 				<a href="http://rocketevolution.com">
 					<img src="images/logo-header.png" class="logo" />
 					<img src="images/logo-light-header.png" class="logo-light" />
 				</a>
 			</div>
 			<!-- end [LOGO] -->
+			<!-- begin [RESPONSIVE-BUTTON] -->
+			<div class="col-sm-5 col-xs-5 visible-sm visible-xs text-right">
+				<button type="button" id="responsivebutton" class="responsivebutton btn btn-danger btn-md">
+					<span class="fa fa-arrow-left"></span><br />
+					<span><small>MENU</small></span>
+				</button>
+			</div>
+			<!-- end [RESPONSIVE-BUTTON] -->
 			<!-- begin [NAVIGATION] -->
 			<div class="col-lg-6 col-md-6 hidden-sm hidden-xs text-center nav">
 				<ul>
 					<li class="active"><a href="http://rocketevolution.com">Home</a></li><li>
 					<a href="#">Services</a></li><li>
 					<a href="#">Portfolio</a></li><li>
-					<a href="#">Work With Us</a></li><li>
+					<a href="#">Hire Us</a></li><li>
 					<a href="#">Contact</a></li>
 				</ul>
 			</div>
@@ -47,7 +71,7 @@
 			<!-- begin [FOLLOW] -->
 			<div class="col-lg-3 col-md-3 hidden-sm hidden-xs text-right follow">
 				<ul>
-					<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+					<li><a href="https://www.facebook.com/rocketevolution" target="_blank"><span class="fa fa-facebook"></span></a></li>
 					<li><a href="#"><span class="fa fa-instagram"></span></a></li>
 					<li><a href="#"><span class="fa fa-youtube"></span></a></li>
 					<li><a href="#"><span class="fa fa-github"></span></a></li>
@@ -63,7 +87,7 @@
 
 	<!-- begin [SLIDESHOW] -->
 	<section id="slider">
-		<div class="container wow fadeInDown" data-wow-delay="500ms">
+		<div class="container wow fadeInDown" data-wow-delay="600ms">
 			<div class="row">
 				<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 					<ul class="carousel-indicators">
@@ -75,10 +99,10 @@
 					
 					<div class="carousel-inner">
 						<div class="item active">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								<img src="images/slideshow-graphic.png" class="imageslide img-responsive" />
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								<h2 class="textcolor-gray">Beautiful and Professional <b>Graphic Design</b></h2>
 								<br />
 								<h5 class="textcolor-lightgray">Compelling and attractive designs! Make your company, brand, product, event or promotion stand out with a professionally designed graphic.</h5>
@@ -91,7 +115,7 @@
 						</div>
 
 						<div class="item">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-right">
 								<h2 class="textcolor-gray">One Site <b>Fits All</b><br />We Focus On Results</h2>
 								<br />
 								<h5 class="textcolor-lightgray">Responsive Websites, designed for desktops, tablets, and mobile devices to reach your customers wherever they are.</h5>
@@ -101,16 +125,16 @@
 									<a href="#" class="btn btn-danger"><span class="fa fa-search"></span> Learn More</a>
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12f">
 								<img src="images/slideshow-website.png" class="imageslide img-responsive" />
 							</div>
 						</div>
 
 						<div class="item">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								<img src="images/slideshow-apps.png" class="imageslide img-responsive" />
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								<h2 class="textcolor-gray">Mobile &amp; Desktop <b>Apps</b><br />We Get Incredible Results</h2>
 								<br />
 								<h5 class="textcolor-lightgray">Every business needs an application. Make your idea available to Millions. We’ll turn your inspiration into a beautifully designed digital product.</h5>
@@ -123,7 +147,7 @@
 						</div>
 
 						<div class="item">
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-right">
 								<h2 class="textcolor-gray"><b>Game</b> Development<br />Make Your Business Interactive</h2>
 								<br />
 								<h5 class="textcolor-lightgray">Customized Game Application to enhance interactive communication with customers and clients.</h5>
@@ -133,7 +157,7 @@
 									<a href="#" class="btn btn-danger"><span class="fa fa-search"></span> Learn More</a>
 								</div>
 							</div>
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 								<img src="images/slideshow-game.png" class="imageslide img-responsive" />
 							</div>
 						</div>
@@ -157,11 +181,11 @@
 	<div class="container">
 		<div class="row menu">
 			<div class="wow fadeInDown" data-wow-delay="100ms">
-	            <h4 class="text-center">We Get Incredible Results</h4>
-	            <p class="text-center">all driven by integrated product teams following a shared vision</p>
-            </div>
-            <br /><br />
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 menu-item wow fadeInUp" data-wow-delay="300ms">
+				<h4 class="text-center">We Get Incredible Results</h4>
+				<p class="text-center">all driven by integrated product teams following a shared vision</p>
+			</div>
+			<br /><br />
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 menu-item wow fadeInUp" data-wow-delay="300ms">
 				<a href="#">
 					<span class="fa fa-pencil round-circle"></span>
 					<h6>Graphic Design</h6>
@@ -169,7 +193,7 @@
 					<p><span class="btn btn-default btn-sm">read more</span></p>
 				</a>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 menu-item wow fadeInDown" data-wow-delay="600ms">
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 menu-item wow fadeInDown" data-wow-delay="600ms">
 				<a href="#">
 					<span class="fa fa-laptop round-circle"></span>
 					<h6>Responsive Web Design</h6>
@@ -177,7 +201,7 @@
 					<p><span class="btn btn-default btn-sm">read more</span></p>
 				</a>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 menu-item wow fadeInUp" data-wow-delay="900ms">
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 menu-item wow fadeInUp" data-wow-delay="900ms">
 				<a href="#">
 					<span class="fa fa-star round-circle"></span>
 					<h6>Mobile &amp; Desktop Apps</h6>
@@ -185,7 +209,7 @@
 					<p><span class="btn btn-default btn-sm">read more</span></p>
 				</a>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 menu-item wow fadeInDown" data-wow-delay="1200ms">
+			<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 menu-item wow fadeInDown" data-wow-delay="1200ms">
 				<a href="#">
 					<span class="fa fa-rocket round-circle"></span>
 					<h6>Let's Start Working</h6>
@@ -204,7 +228,7 @@
 	<!-- begin [TITLE] -->
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 text-right">
+			<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 text-right">
 				<div class="pad-l-lg clearpadding-sm clearpadding-xs wow fadeInLeft" data-wow-delay="200ms">
 					<br class="hidden-xs" />
 					<h2 class="textcolor-red">Rocket Evolution</h2>
@@ -212,13 +236,13 @@
 					<br />
 					<p><big>If you are a weapon of mass creation, like the artists here, this is where you stock your arsenal. Rocket Evolution’s Arsenal drops killer design resources from super power artists the world over.</big></p>
 					<br />
-					<p><big>We Get Incredible Results all driven by integrated product teams following a shared vision</big></p>
+					<p>We Get Incredible Results all driven by integrated product teams following a shared vision.</p>
 					<br />
-					<div><a href="#" class="btn btn-warning"><span class="fa fa-rocket"></span> Let's Start Working</a></div>
+					<div><a href="#" class="btn btn-warning btn-lg"><span class="fa fa-rocket"></span> Let's Start Working</a></div>
 					<br class="visible-xs" />
 				</div>
 			</div>
-			<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="200ms"><a href="#"><img src="images/rocketevolution-phone.png" class="img-responsive clearspace" /></a></div>
+			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="200ms"><a href="#"><img src="images/rocketevolution-phone.png" class="img-responsive clearspace" /></a></div>
 		</div>
 	</div>
 	<!-- end [TITLE] -->
@@ -234,18 +258,18 @@
 		<div class="container">
 
 			<div class="row">
-				<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="200ms"><a href="#"><img src="images/naked.png" class="img-responsive clearspace" /></a></div>
-				<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+				<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-delay="200ms"><a href="#"><img src="images/naked.png" class="img-responsive clearspace" /></a></div>
+				<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
 					<div class="pad-l-lg clearpadding-sm clearpadding-xs wow fadeInRight" data-wow-delay="200ms">
 						<br />
 						<h2>Your Business Is <b>Naked</b></h2>
 						<h3>Without Good Design</h3>
 						<br />
-						<p><big>Well designed print collateral like business cards, brochures and banners will certainly make you feel more confident, but good professional design does so much more than that. Quality design increases the effectiveness of your print pieces.
+						<p><big>Well designed print collateral like business cards, brochures and banners will certainly make you feel more confident, but good professional design does so much more than that. Quality design increases the effectiveness of your print pieces.</big>
 						<br /><br />
-						Whether you’re trying to sell a product, shift the perception of your brand or deliver a message, great design will help you accomplish your goal.</big></p>
+						Whether you’re trying to sell a product, shift the perception of your brand or deliver a message, great design will help you accomplish your goal.</p>
 						<br />
-						<div><a href="#" class="btn btn-danger"><span class="fa fa-rocket"></span> Work With Us</a></div>
+						<div><a href="#" class="btn btn-danger btn-lg"><span class="fa fa-rocket"></span> Work With Us</a></div>
 						<br class="visible-xs" />
 					</div>
 				</div>
@@ -262,21 +286,21 @@
 		<div class="container">
 			<div class="row">
 
-				<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 text-right">
+				<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 text-right">
 				<div class="pad-l-lg clearpadding-sm clearpadding-xs wow fadeInLeft" data-wow-delay="200ms">
 					<br class="hidden-xs" />
 					<h2>We’ll turn your inspiration</h2>
 					<h3>into a beautifully designed digital product.</h3>
 					<br />
-					<p><big>If you are a weapon of mass creation, like the artists here, this is where you stock your arsenal. Rocket Evolution’s Arsenal drops killer design resources from super power artists the world over.</big></p>
+					<p><big>e get incredible results, all driven by integrated product teams following a shared vision. We don’t form teams based on who is first available. We assemble permanent teams that stay together for years. Our teams sit together and create together, they succeed and fail together, and they know they are better together.</big></p>
 					<br />
-					<p><big>We Get Incredible Results all driven by integrated product teams following a shared vision</big></p>
+					<p>Everyday, you’ll work directly with the same team. A team that trusts each other implicitly, a team willing to challenge you to think bigger, and a team that is as invested in your product as you are. A team you’ll be proud to call your own.</p>
 					<br />
-					<div><a href="#" class="btn btn-warning"><span class="fa fa-rocket"></span> Let's Start Working</a></div>
+					<div><a href="#" class="btn btn-warning btn-lg"><span class="fa fa-rocket"></span> Let's Start Working</a></div>
 					<br class="visible-xs" />
 				</div>
 			</div>
-			<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 wow fadeInRight" data-wow-delay="200ms"><a href="#"><img src="images/mockup.png" class="img-responsive clearspace" /></a></div>
+			<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 wow fadeInRight" data-wow-delay="200ms"><a href="#"><img src="images/mockup.png" class="img-responsive clearspace" /></a></div>
 
 			</div>
 		</div>
@@ -290,125 +314,241 @@
 		<div class="container">
 
 			<div class="row text-center wow fadeInDown" data-wow-delay="100ms">
-	            <h4>Recent Works</h4>
-	            <br />
-	            <p>After years and hundreds of web design and software apps projects,<br />we are proud of our reputation for client service and success</p>
-	            <br />
+				<h4>Recent Works</h4>
+				<br />
+				<p>After years and hundreds of web design and software apps projects,<br />we are proud of our reputation for client service and success</p>
+				<br />
 				<p><a href="#" class="btn btn-danger"><span class="fa fa-star"></span> View All Projects</a></p>
 			</div>
 
 			<br /><br />
 
 			<div class="row wow fadeInDown" data-wow-delay="300ms">
-                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 clearspace">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item1.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a> </h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item1.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 clearspace">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 clearspace">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 clearspace">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 clearspace">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item5.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme</a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item5.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 clearspace">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item6.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item6.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 clearspace">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item7.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item7.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 clearspace">
-                    <div class="recent-work-wrap">
-                        <img class="img-responsive" src="images/portfolio/recent/item8.png" alt="">
-                        <div class="overlay">
-                            <div class="recent-work-inner">
-                                <h3><a href="#">Business theme </a></h3>
-                                <p>There are many variations of passages of Lorem Ipsum available, but the majority</p>
-                                <a class="preview" href="images/portfolio/full/item8.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
-                            </div> 
-                        </div>
-                    </div>
-                </div>   
-            </div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 recentwork">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h6>Elite Prime : Dental Hub</h6>
+							<br />
+							<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+							<br />
+							<div>
+								<a href="#" class="btn btn-warning btn-xs"><span class="fa fa-search"></span> read more</a>
+								<a href="#" class="btn btn-danger btn-xs"><span class="fa fa-star"></span> view all</a>
+							</div>
+						</div>
+					</div>
+					<div><img src="images/portfolio/eliteprime.png" /></div>
+				</div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 recentwork">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h6>BMH : Systems Solutions Inc.</h6>
+							<br />
+							<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+							<br />
+							<div>
+								<a href="#" class="btn btn-warning btn-xs"><span class="fa fa-search"></span> read more</a>
+								<a href="#" class="btn btn-danger btn-xs"><span class="fa fa-star"></span> view all</a>
+							</div>
+						</div>
+					</div>
+					<div><img src="images/portfolio/bmh.png" /></div>
+				</div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 recentwork">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h6>Urban Connection : Nail Lounge &amp; Spa</h6>
+							<br />
+							<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+							<br />
+							<div>
+								<a href="#" class="btn btn-warning btn-xs"><span class="fa fa-search"></span> read more</a>
+								<a href="#" class="btn btn-danger btn-xs"><span class="fa fa-star"></span> view all</a>
+							</div>
+						</div>
+					</div>
+					<div><img src="images/portfolio/urbanconnection.png" /></div>
+				</div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 recentwork">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h6>VLuna Overruns</h6>
+							<br />
+							<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+							<br />
+							<div>
+								<a href="#" class="btn btn-warning btn-xs"><span class="fa fa-search"></span> read more</a>
+								<a href="#" class="btn btn-danger btn-xs"><span class="fa fa-star"></span> view all</a>
+							</div>
+						</div>
+					</div>
+					<div><img src="images/portfolio/vluna.png" /></div>
+				</div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 recentwork">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h6>Ratpocalypse : Mobile Game</h6>
+							<br />
+							<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+							<br />
+							<div>
+								<a href="#" class="btn btn-warning btn-xs"><span class="fa fa-search"></span> read more</a>
+								<a href="#" class="btn btn-danger btn-xs"><span class="fa fa-star"></span> view all</a>
+							</div>
+						</div>
+					</div>
+					<div><img src="images/portfolio/ratpocalypse.png" /></div>
+				</div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 recentwork">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h6>All About!</h6>
+							<br />
+							<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+							<br />
+							<div>
+								<a href="#" class="btn btn-warning btn-xs"><span class="fa fa-search"></span> read more</a>
+								<a href="#" class="btn btn-danger btn-xs"><span class="fa fa-star"></span> view all</a>
+							</div>
+						</div>
+					</div>
+					<div><img src="images/portfolio/allabout.png" /></div>
+				</div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 recentwork">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h6>MSI : Multistyle Specialist</h6>
+							<br />
+							<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+							<br />
+							<div>
+								<a href="#" class="btn btn-warning btn-xs"><span class="fa fa-search"></span> read more</a>
+								<a href="#" class="btn btn-danger btn-xs"><span class="fa fa-star"></span> view all</a>
+							</div>
+						</div>
+					</div>
+					<div><img src="images/portfolio/msi.png" /></div>
+				</div>
+				
+				<div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 recentwork">
+					<div class="overlay">
+						<div class="overlay-content">
+							<h6>Digestive System : Mobile Game for kids</h6>
+							<br />
+							<div>Lorem ipsum dolor sit amet consectetur adipiscing elit.</div>
+							<br />
+							<div>
+								<a href="#" class="btn btn-warning btn-xs"><span class="fa fa-search"></span> read more</a>
+								<a href="#" class="btn btn-danger btn-xs"><span class="fa fa-star"></span> view all</a>
+							</div>
+						</div>
+					</div>
+					<div><img src="images/portfolio/deped.png" /></div>
+				</div>
+
+			</div>
+			<br />
 
 		</div>
 	</div>
 	<!-- end [CONTENT (DARK)] 3 -->
 
 
+
+	<!-- begin [CONTENT (LIGHT)] 4 -->
+	<div class="content-light">
+		<div class="container">
+			<div class="row">
+
+					<br /><br />
+					<div class="wow fadeInDown" data-wow-delay="200ms">
+						<h3 class="text-center">How to Reach Us?</h3>
+						<p class="text-center">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+
+					<br />
+
+					<div class="wow fadeInUp" data-wow-delay="400ms">
+						<form action="https://formspree.io/ed_m_clemente@yahoo.com" method="POST">
+						<div class="col-sm-5 col-sm-offset-1">
+							<div class="form-group">
+								<label>Name *</label>
+								<input type="text" name="name" class="form-control" required="required">
+							</div>
+							<div class="form-group">
+								<label>Email *</label>
+								<input type="email" name="email" class="form-control" required="required">
+							</div>
+							<div class="form-group">
+								<label>Subject *</label>
+								<input type="text" name="subject" class="form-control" required="required">
+							</div>
+						</div>
+						<div class="col-sm-5">
+						    <div class="form-group">
+						        <label>Message *</label>
+						        <textarea name="message" id="message" required="required" class="form-control" rows="6"></textarea>
+						    </div>                        
+						    <div class="form-group">
+									<input type="hidden" name="_next" value="//www.rocketevolution.com" />
+						        <button type="submit" name="submit" class="btn btn-warning btn-md" required="required"><span class="fa fa-paper-plane"></span> Send</button>
+						    </div>
+						</div>
+						</form>
+	                </div>
+
+			</div>
+		</div>
+	</div>
+	<!-- end [CONTENT (LIGHT)] 4 -->
+
+
+	<hr class="container hr-border" />
+
+
+	<!-- begin [FOOTER] -->
+	<div class="container">
+		<div class="row text-center">
+			<div class="footer">
+				<h3 class="footer-socialmedia wow fadeInUp" data-wow-delay="200ms">
+					<a href="https://www.facebook.com/rocketevolution" target="_blank"><span class="fa fa-facebook"></span></a>
+					<a href="#"><span class="fa fa-instagram"></span></a>
+					<a href="#"><span class="fa fa-youtube"></span></a>
+					<a href="#"><span class="fa fa-github"></span></a>
+				</h3>
+			</div>
+		</div>
+	</div>
+	<!-- end [FOOTER] -->
+
+
+	<!-- begin [FOOTER-END] -->
+	<div class="footer-end">
+		<div class="totop"><a href="#" id="totop"><span class="fa fa-chevron-up fa-2x round-circle wow fadeInDown" data-wow-delay="400ms"></span></a></div>
+		<div class="container">
+			<div class="row text-center wow fadeInDown" data-wow-delay="600ms">
+				<div><a href="http://rocketevolution.com"><img src="images/logo.png" class="footer-logo" /></a></div>
+				<div>
+				Copyright &copy; 2016 RocketEvolution. All rights reserved.</div>
+				<div>Designed &amp; developed by <a href="http://rocketevolution.com">RocketEvolution.com</a></div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- end [FOOTER-END] -->
+
+
 	<!-- begin [JAVASCRIPT] -->
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
 	<script type="text/javascript" src="js/custom.js"></script>
-	<script type="text/javascript" src="js/wow.min.js"></script>
 	<!-- end [JAVASCRIPT] -->
 
 </body>
