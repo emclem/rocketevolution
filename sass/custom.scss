@@ -203,6 +203,7 @@ $responsivemenuwidth: 80%;
 	top: 0px;
 	right: -$responsivemenuwidth;
 	width: $responsivemenuwidth;
+		font-size: 2.5em;
 	.backbutton {
 		width: 100%;
 		text-align: left;
@@ -212,6 +213,7 @@ $responsivemenuwidth: 80%;
 		-moz-border-radius: 0px;
 		-webkit-border-radius: 0px;
 		padding: 15px 25px;
+		font-size: 1.35em;
 	}
 	ul {
 		@include clearspace();
@@ -221,7 +223,7 @@ $responsivemenuwidth: 80%;
 			a {
 				@include transition(400ms);
 				font-size: 1.2em;
-				padding: 15px 25px;
+				padding: 45px 65px;
 				display: block;
 				color: #FFF;
 				&:hover { background: rgba(#000, 1); color: #FFF; }
@@ -461,9 +463,65 @@ $footer-spacer: 80px;
 }
 @media (min-width: 768px) and (max-width: 991px) { // SM
 	.clearpadding-sm { padding: 0px !important; }
+	.header {
+		height: $header-height + 80px;
+		.logo { max-height: $header-height + 60px; }
+		.logo-light {
+			@include transition(400ms);
+			position: absolute;
+			top: -180px;
+			max-height: $header-height + 40px;
+		}
+		.responsivebutton {
+			@include transition(400ms);
+			margin-top: 10px;
+			.fa { @include transition(400ms); font-size: 3em; padding: 20px;}
+		}
+	}
+	.header-scrolled {
+		height: $header-height + 100px;
+		background: rgba($darkgray, 0.85);
+		.logo { top: -180px; }
+		.logo-light {
+			top: 10px;
+			max-height: $header-height + 80px;
+		}
+		.responsivebutton {
+			margin-top: 18px;
+			.fa { font-size: 3em; padding: 25px;}
+		}
+	}
 }
 @media (max-width: 767px) { // XS
 	.clearpadding-xs { padding: 0px !important; }
+	.header {
+		height: $header-height + 40px;
+		.logo { max-height: $header-height; }
+		.logo-light {
+			@include transition(400ms);
+			position: absolute;
+			top: -120px;
+			max-height: $header-height - 20px;
+		}
+		.responsivebutton {
+			@include transition(400ms);
+			margin-top: 8px;
+			.fa { @include transition(400ms); font-size: 2em; padding: 10px;}
+		}
+	}
+	.header-scrolled {
+		height: $header-height + 50px;
+		background: rgba($darkgray, 0.85);
+		.logo { top: -120px; }
+		.logo-light {
+			top: 10px;
+			max-height: $header-height;
+		}
+		.responsivebutton {
+			margin-top: 12px;
+			.fa { font-size: 2em; padding: 10px;}
+		}
+	}
 }
 
 
