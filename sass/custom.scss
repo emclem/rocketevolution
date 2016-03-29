@@ -5,14 +5,14 @@ body {
 	@extend %clearspace-extend;
 	@include transition();
 	background: #FFF;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 1.5em;
 	width: 100%;
 	color: $lightgray;
 	overflow-x: hidden;
 }
 ul,li { @extend %clearspace-extend; list-style: none; }
-h1,h2,h3,h4,h5,h6 { @extend %clearspace-extend; line-height: 1.4em; }
+h1,h2,h3,h4,h5,h6 { @extend %clearspace-extend; font-weight: normal; line-height: 1.4em; }
 h1 { font-size: 3em; }
 h2 { font-size: 2.5em; }
 h3 { font-size: 2em; }
@@ -255,11 +255,11 @@ $responsivemenuwidth: 80%;
 		padding: 0px 30px;
 	}
 	.control-carousel {
-	  position: absolute;
-	  top: 48%;
-	  font-size: 60px;
-	  color: #C2C2C1;
-	  &:hover { color: $red; }
+		position: absolute;
+		top: 48%;
+		font-size: 60px;
+		color: #C2C2C1;
+		&:hover { color: $red; }
 	}
 	.right {
 		right: 0;
@@ -443,7 +443,9 @@ $footer-spacer: 80px;
 			line-height: 42px;
 			border: solid 2px #FFF;
 			&:hover {
+				border: solid 5px #FFF;
 				background: $red;
+				font-size: 1.5em;
 			}
 		}
 	}
